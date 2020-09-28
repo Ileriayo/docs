@@ -64,7 +64,7 @@ When pods are set up to use persistent storage, they mount a persistent volume c
 
 > Claims will remain unbound indefinitely if a matching volume does not exist. Claims will be bound as matching volumes become available. For example, a cluster provisioned with many 50Gi PVs would not match a PVC requesting 100Gi. The PVC can be bound when a 100Gi PV is added to the cluster.
 
-In other words, you can create unlimited PVCs, but they will only be bound to PVs if the Kubernetes master can find a sufficient PVs that has at least the amount of disk space required by the PVC.
+In other words, you can create unlimited PVCs, but they will only be bound to PVs if the Kubernetes master can find a sufficient PV that has at least the amount of disk space required by the PVC.
 
 To dynamically provision new storage, the PVC mounted in the pod would have to correspond to a storage class instead of a persistent volume.
 
